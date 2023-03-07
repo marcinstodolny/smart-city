@@ -1,0 +1,15 @@
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\bin\Debug\net6.0\smart city.exe
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\bin\Debug\net6.0\smart city.deps.json
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\bin\Debug\net6.0\smart city.runtimeconfig.json
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\bin\Debug\net6.0\smart city.dll
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\bin\Debug\net6.0\smart city.pdb
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\obj\Debug\net6.0\smart city.csproj.AssemblyReference.cache
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\obj\Debug\net6.0\smart city.GeneratedMSBuildEditorConfig.editorconfig
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\obj\Debug\net6.0\smart city.AssemblyInfoInputs.cache
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\obj\Debug\net6.0\smart city.AssemblyInfo.cs
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\obj\Debug\net6.0\smart city.csproj.CoreCompileInputs.cache
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\obj\Debug\net6.0\smart city.dll
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\obj\Debug\net6.0\refint\smart city.dll
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\obj\Debug\net6.0\smart city.pdb
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\obj\Debug\net6.0\smart city.genruntimeconfig.cache
+G:\Programowanie\CODECOOL\OOP c#\Week 2\smart city\obj\Debug\net6.0\ref\smart city.dll
