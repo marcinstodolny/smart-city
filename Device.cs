@@ -1,4 +1,6 @@
-﻿namespace smart_city
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace smart_city
 {
     public abstract class Device
     {

@@ -1,0 +1,20 @@
+
+Device
+manufacturer
+name
+serial number
+warranty months
+connection status (connected, warning, error)
+
+
+gateway
+manufacturer
+address
+list of devices associated
+
+smart waste bin
+compactor
+
+smart light
+type
+power

@@ -11,10 +11,10 @@
             gateways.Add(gateway);
             gateways.Add(gateway2);
 
-            Device device1 = new SmartLight("Lamp","4adf1", "someone", 10, "LED", 150);
+            Device device1 = new SmartLight("Lamp","4adf1", "someone", 10, Enum.GetName(SmartLightType.Led), (int)SmartLightType.Led);
             devices.Add(device1);
 
-            Device device2 = new SmartLight("Lamp", "4adf1", "someone2", 10, "Halogen", 200);
+            Device device2 = new SmartLight("Lamp", "4adf1", "someone2", 10, Enum.GetName(SmartLightType.Halogen), (int)SmartLightType.Halogen);
             devices.Add(device2);
 
             Device bin = new SmartWasteBin("bin", "4adf1", "someone2", 10, true);
@@ -22,7 +22,7 @@
             gateway.ConnectDevice(device1);
             gateway.ConnectDevice(device2);
 
-            Console.WriteLine(device1.ConnectionStatus);
+            Console.WriteLine(device1.ConnectionStatus +$" {device1}" );
             Console.WriteLine(device2.ConnectionStatus);
             foreach (var deviceError in DevicesWithError())
             {
