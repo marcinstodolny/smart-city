@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-namespace smart_city
+﻿namespace smart_city
 {
     public abstract class Device
     {
@@ -8,7 +6,7 @@ namespace smart_city
         public string Name { get; set; }
         public string SerialNumber { get; set; }
         public int WarrantyPeriod { get; set; }
-        public int ConnectionStatus { get; set; }
+        public ConnectionStatus ConnectionStatus { get; set; }
 
         protected Device(string name, string serialNumber, string manufacturer, int warrantyPeriod)
         {
@@ -16,7 +14,7 @@ namespace smart_city
             this.Name = name;
             this.SerialNumber = serialNumber;
             this.WarrantyPeriod = warrantyPeriod;
-            ConnectionStatus = (int)Connection.Error;
+            ConnectionStatus = ConnectionStatus.Error;
         }
     }
 }

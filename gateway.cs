@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace smart_city
+﻿namespace smart_city
 {
     internal class gateway
     {
-        public string Manufacturer { get; }
-        public string Address { get; }
+        public string Manufacturer { get; set; }
+        public string Address { get; set; }
         public List<Device> DevicesConnected { get; }
         public gateway(string manufacturer, string address)
         {
@@ -21,15 +15,9 @@ namespace smart_city
         public bool ConnectDevice(Device device)
         {
             if (device.Manufacturer != Manufacturer) return false;
-            device.ConnectionStatus = (int)Connection.Connected;
+            device.ConnectionStatus = ConnectionStatus.Connected;
             DevicesConnected.Add(device);
             return true;
         }
-
-        public int CountDevices()
-        {
-            return DevicesConnected.Count;
-        }
-
     }
 }

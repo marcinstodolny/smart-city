@@ -3,7 +3,6 @@
     public class program
     {
         static List<gateway> gateways = new();
-        static List<Device> devices = new();
         public static void Main()
         {
             var gateway = new gateway("someone", "none");
@@ -11,35 +10,28 @@
             gateways.Add(gateway);
             gateways.Add(gateway2);
 
-            Device device1 = new SmartLight("Lamp","4adf1", "someone", 10, Enum.GetName(SmartLightType.Led), (int)SmartLightType.Led);
-            devices.Add(device1);
-
-            Device device2 = new SmartLight("Lamp", "4adf1", "someone2", 10, Enum.GetName(SmartLightType.Halogen), (int)SmartLightType.Halogen);
-            devices.Add(device2);
-
-            Device bin = new SmartWasteBin("bin", "4adf1", "someone2", 10, true);
-            devices.Add(bin);
+            var device1 = new SmartLight("Lamp","4adf1a", "someone", 10, SmartLightType.Led);
             gateway.ConnectDevice(device1);
-            gateway.ConnectDevice(device2);
 
-            Console.WriteLine(device1.ConnectionStatus +$" {device1}" );
-            Console.WriteLine(device2.ConnectionStatus);
-            foreach (var deviceError in DevicesWithError())
-            {
-                Console.WriteLine($"Device with error: {deviceError.Name}");
+            var device2 = new SmartLight("Lamp", "4adf1d", "someone2", 10, SmartLightType.Halogen);
+            gateway2.ConnectDevice(device2);
 
-            }
-            Console.WriteLine($"Devices installed: {DevicesInstalled()}");
+            var bin = new SmartWasteBin("bin", "4adfb1", "someone2", 10, true);
+            gateway2.ConnectDevice(bin);
+
+            var DeviceWithError = DevicesWithError();
+            var DeviceCount = DevicesInstalled();
+
         }
 
         public static List<Device> DevicesWithError()
         {
-            return devices.Where(t => t.ConnectionStatus == (int)Connection.Error).ToList();
+            return gateways.SelectMany(gate => gate.DevicesConnected.Where(d => d.ConnectionStatus == ConnectionStatus.Error)).ToList();
         }
 
         public static int DevicesInstalled()
         {
-            return gateways.Sum(elementGateway => elementGateway.CountDevices());
+            return gateways.Sum(element => element.DevicesConnected.Count);
         }
     }
 }

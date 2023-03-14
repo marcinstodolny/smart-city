@@ -7,10 +7,5 @@
         {
             Compactor = compactor;
         }
-
-        public override string ToString()
-        {
-            return $"Compactor: {Compactor}";
-        }
     }
 }

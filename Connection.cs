@@ -1,6 +1,6 @@
 ﻿namespace smart_city
 {
-    public enum Connection
+    public enum ConnectionStatus
     {
         Connected,
         Warning,
